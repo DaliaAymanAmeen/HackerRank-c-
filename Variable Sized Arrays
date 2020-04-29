@@ -1,0 +1,42 @@
+    #include <iostream>
+    #include <set>
+    using namespace std;
+
+    int main()
+    {
+        int array_size;
+        int new_array_size;
+        cin>>array_size;
+        int **arr = new int*[array_size];   //array of pointers
+        int num_q ;
+        cin>>num_q;
+        int q;
+        int j;
+        int i=0;
+        while(i<array_size)
+        {
+            cin>>new_array_size;
+            int *new_arr = new int[new_array_size];
+            arr[i]=new_arr;
+            for (int j=0 ; j<new_array_size ; j++)   { cin>>new_arr[j];}
+            i++;
+
+        }
+
+        i=0;
+        while(i<num_q)
+        {
+            cin>>q;
+            cin>>j;
+            cout<<arr[q][j]<<endl;
+            i++;
+        }
+
+
+
+
+
+      return 0;
+    }
+
+
